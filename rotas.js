@@ -1,4 +1,15 @@
 const express = require('express')
 const app = express()
 
-const alunoDB = require('./app')
+const alunoDB = require('./app2')
+
+app.get("/usuarios", function(req,res){
+    res.type("usuarios.html")
+})
+
+//Iniciar servidor
+let server = app.listen(3000, function(){
+    let host = server.address().addresslet 
+    let port = server.address().port
+    console.log("Servidor iniciado em https://%s:%s", host, port)
+})
